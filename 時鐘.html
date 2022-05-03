@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,19 +10,44 @@
     body {
       background-image: url(star.jpg);
     }
+
+    #back {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border-bottom: 6px solid lawngreen;
+      position: relative;
+      animation: animation 1.5s infinite linear;
+    }
+
+    @keyframes animation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
     #clock {
       width: 300px;
       height: 300px;
       border-radius: 50%;
-      position: relative;
+      position: absolute;
       left: 50%;
-      transform: translate(-50%,0);
+      top: 25%;
+      background: linear-gradient(to left bottom, blue, skyblue);
+      transform: translate(-50%, -50%);
       box-shadow:
         0 0 5px rgba(0, 10, 255, 1),
         0 0 25px rgba(0, 10, 255, 0.8),
         0 0 50px rgba(0, 10, 255, 0.5),
         0 0 150px rgba(0, 10, 255, 0.3);
     }
+
     #hour {
       width: 20%;
       height: 10px;
@@ -32,6 +58,7 @@
       border-radius: 5px;
       transform-origin: left center;
     }
+
     #minute {
       width: 40%;
       height: 10px;
@@ -42,6 +69,7 @@
       border-radius: 5px;
       transform-origin: left center;
     }
+
     #second {
       width: 45%;
       height: 10px;
@@ -52,118 +80,195 @@
       border-radius: 5px;
       transform-origin: left center;
     }
-    .number12{
-      width:15px;
+
+    .number12 {
+      width: 15px;
       font-size: 2rem;
       color: white;
       position: absolute;
       left: 45%;
       top: 5%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
-    .number1{
-      width:10px;
+
+    .number1 {
+      width: 10px;
       font-size: 1.5rem;
       color: white;
       position: absolute;
       right: 22.5%;
       top: 10%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
-    .number2{
-      width:10px;
+
+    .number2 {
+      width: 10px;
       font-size: 1.5rem;
       color: white;
       position: absolute;
       right: 5%;
       top: 27.5%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
-    .number3{
-      width:15px;
+
+    .number3 {
+      width: 15px;
       font-size: 2rem;
       color: white;
       position: absolute;
       right: -1.5%;
       top: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
-    .number4{
-      width:10px;
+
+    .number4 {
+      width: 10px;
       font-size: 1.5rem;
       color: white;
       position: absolute;
       right: 5%;
       top: 72.5%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
-    .number5{
-      width:10px;
+
+    .number5 {
+      width: 10px;
       font-size: 1.5rem;
       color: white;
       position: absolute;
       right: 22.5%;
       top: 90%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
-    .number6{
-      width:15px;
+
+    .number6 {
+      width: 15px;
       font-size: 2rem;
       color: white;
       position: absolute;
       left: 47.5%;
       top: 95%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
-    .number7{
-      width:10px;
+
+    .number7 {
+      width: 10px;
       font-size: 1.5rem;
       color: white;
       position: absolute;
       left: 24%;
       top: 90%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
-    .number8{
-      width:10px;
+
+    .number8 {
+      width: 10px;
       font-size: 1.5rem;
       color: white;
       position: absolute;
       left: 7.5%;
       top: 72.5%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
-    .number9{
-      width:15px;
+
+    .number9 {
+      width: 15px;
       font-size: 2rem;
       color: white;
       position: absolute;
       left: 2.5%;
       top: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
-    .number10{
-      width:10px;
+
+    .number10 {
+      width: 10px;
       font-size: 1.5rem;
       color: white;
       position: absolute;
       left: 7.5%;
       top: 27.5%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
-    .number11{
-      width:10px;
+
+    .number11 {
+      width: 10px;
       font-size: 1.5rem;
       color: white;
       position: absolute;
       left: 22.5%;
       top: 10%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
+    }
+
+    #nowtoday {
+      color: orange;
+      position: absolute;
+      top: 50%;
+      text-shadow:
+        0 0 5px rgb(218, 153, 33, 1),
+        0 0 25px rgba(218, 153, 33, 0.8),
+        0 0 50px rgba(218, 153, 33, 0.5),
+        0 0 150px rgba(218, 153, 33, 0.3);
+    }
+
+    .box {
+      width: 600px;
+      height: 350px;
+      background-color: gray;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10%;
+      box-shadow:
+        0 0 5px rgb(221, 204, 204, 1),
+        0 0 25px rgba(221, 204, 204, 0.8),
+        0 0 50px rgba(221, 204, 204, 0.5),
+        0 0 150px rgba(221, 204, 204, 0.3);
+    }
+
+    .box1 {
+      width: 120px;
+      height: 200px;
+      background-color: black;
+      position: relative;
+      top: 20%;
+      left: 10%;
+    }
+
+    .box2 {
+      width: 120px;
+      height: 200px;
+      background-color: black;
+      position: relative;
+      bottom: 170px;
+      left: 40%;
+    }
+
+    .box3 {
+      width: 120px;
+      height: 200px;
+      background-color: black;
+      position: relative;
+      bottom: 410px;
+      left: 70%;
+    }
+
+    .box h1 {
+      text-align: center;
+      font-size: 60px;
+      color: greenyellow;
+      line-height: 200px;
+      border: green 2px dotted;
     }
   </style>
 </head>
+
 <body>
+
   <div id="clock">
+    <div id="back"></div>
     <div id="hour"></div>
     <div id="minute"></div>
     <div id="second"></div>
@@ -180,23 +285,53 @@
     <div class="number10">10</div>
     <div class="number11">11</div>
   </div>
+  <h1 id='nowtoday'></h1>
+  <div class="box">
+    <div class="box1">
+      <h1 id='todayhours'></h1>
+    </div>
+    <div class="box2">
+      <h1 id='todayminutes'></h1>
+    </div>
+    <div class="box3">
+      <h1 id='todayseconds'></h1>
+    </div>
+  </div>
   <script>
     const elHour = document.getElementById('hour')
     const elMinute = document.getElementById('minute')
     const elSecond = document.getElementById('second')
-    
+    const nowtoday = document.getElementById('nowtoday')
+    const clock = document.getElementById('clock')
+    const todayhours = document.getElementById('todayhours')
+    const todayminutes = document.getElementById('todayminutes')
+    const todayseconds = document.getElementById('todayseconds')
 
     setInterval(() => {
       const date = new Date()
+      let ty = date.getFullYear()
+      let tm = date.getMonth()
+      let td = date.getDate()
+      let th = date.getHours()
+      let tm2 = date.getMinutes()
+      let ts = date.getUTCSeconds()
+      nowtoday.innerText = `${ty}年${tm + 1}月 ${td}日 ${th}:${tm2}:${ts}`
+      todayhours.innerText = `${th}`
+      todayminutes.innerText = `${tm2}`
+      todayseconds.innerText = `${ts}`
+      box1.innerhtml = `${th}`
       // 360/12=30
-      elHour.style.transform = `rotate(${date.getHours()*30-90}deg)`
+      elHour.style.transform = `rotate(${date.getHours() * 30 - 90}deg)`
       // 360/60=6
-      elMinute.style.transform = `rotate(${date.getMinutes()*6-90}deg)`
-      elSecond.style.transform = `rotate(${date.getSeconds()*6-90}deg)`
+      elMinute.style.transform = `rotate(${date.getMinutes() * 6 - 90}deg)`
+      elSecond.style.transform = `rotate(${date.getSeconds() * 6 - 90}deg)`
     }, 1000)
 
-    
-    
+
+
+
+
   </script>
 </body>
+
 </html>
